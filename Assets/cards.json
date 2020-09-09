@@ -1,0 +1,299 @@
+{
+
+    "cards": [
+        {
+            "name": "Elven Archer",
+            "id": "00001",
+            "mana": 1,
+            "attack" : 1,
+            "health": 1,
+            "cardType": "minion",
+            "tags": ["collectible"],
+            "types" : [],
+            "set": "basic",
+            "rarity" : "none",
+            "imageUrl": "",
+            "cardText" : "[b]Battlecry[/b]: Deal 1 damage.",
+            "keywords" : [],
+            "triggers" : [
+                {
+                    "trigger" : "onBattlecry",
+                    "targets": "1",
+                    "targeting": "select",
+                    "filters": ["any"],
+                    "effect" : "damage",
+                    "values": ["1"],
+                    "gfx" : "arrow-01"
+                }
+            ]
+        },
+        {
+            "name": "Goldshire Footman",
+            "id": "00002",
+            "mana": 1,
+            "attack" : 1,
+            "health": 2,
+            "cardType": "minion",
+            "tags": ["collectible"],
+            "types" : [],
+            "set": "basic",
+            "rarity" : "none",
+            "imageUrl": "",
+            "cardText" : "{0}",
+            "keywords" : ["taunt"],
+            "triggers" : []
+        },
+        {
+            "name": "Grimscale Oracle",
+            "id": "00003",
+            "mana": 1,
+            "attack" : 1,
+            "health": 1,
+            "cardType": "minion",
+            "tags": ["collectible"],
+            "types" : ["murloc"],
+            "set": "basic",
+            "rarity" : "none",
+            "imageUrl": "",
+            "cardText" : "Your other Murlocs have +1 Attack",
+            "keywords" : [],
+            "triggers" : [
+                {
+                    "trigger" : "always",
+                    "targets": "all",
+                    "targeting": "none",
+                    "filters": ["friendly", "murloc", "other"],
+                    "effect" : "buff",
+                    "values": ["1", "0"],
+                    "gfx" : ""
+                }
+            ]
+        },
+        {
+            "name": "Stonetusk Boar",
+            "id": "00004",
+            "mana": 1,
+            "attack" : 1,
+            "health": 1,
+            "cardType": "minion",
+            "tags": ["collectible"],
+            "types" : [ "beast"],
+            "set": "basic",
+            "rarity" : "none",
+            "imageUrl": "",
+            "cardText" : "{0}",
+            "keywords" : ["charge"],
+            "triggers" : []
+        },
+        {
+            "name": "Voodoo Doctor",
+            "id": "00005",
+            "mana": 1,
+            "attack" : 2,
+            "health": 1,
+            "cardType": "minion",
+            "tags": ["collectible"],
+            "types" : [],
+            "set": "basic",
+            "rarity" : "none",
+            "imageUrl": "",
+            "cardText" : "[b]Battlecry[/b]: Restore 2 Health.",
+            "keywords" : [],
+            "triggers" : [
+                {
+                    "trigger" : "onBattlecry",
+                    "targets": "1",
+                    "targeting": "select",
+                    "filters": ["any"],
+                    "effect" : "heal",
+                    "values": ["2"],
+                    "gfx" : ""
+                }
+            ]
+        },
+        {
+            "name": "Acidic Swamp Ooze",
+            "id": "00006",
+            "mana": 2,
+            "attack" : 3,
+            "health": 2,
+            "cardType": "minion",
+            "tags": ["collectible"],
+            "types" : [],
+            "set": "basic",
+            "rarity" : "none",
+            "imageUrl": "",
+            "cardText" : "[b]Battlecry[/b]: Destroy your opponent's weapon.",
+            "keywords" : [],
+            "triggers" : [
+                {
+                    "trigger" : "onBattlecry",
+                    "targets": "1",
+                    "targeting": "none",
+                    "filters": ["opponent", "weapon"],
+                    "effect" : "destroy",
+                    "values": [],
+                    "gfx" : ""
+                }
+            ]
+        },
+        {
+            "name": "Murloc Tide Hunter",
+            "id": "00007",
+            "mana": 2,
+            "attack" : 2,
+            "health": 1,        
+            "cardType": "minion",
+            "tags": ["collectible"],
+            "types" : ["murloc"],
+            "set": "basic",
+            "rarity" : "none",
+            "imageUrl": "",
+            "cardText" : "[b]Battlecry[/b]: Summon a 1/1 Murloc Scout",
+            "keywords" : [],
+            "triggers" : [
+                {
+                    "trigger" : "onBattlecry",
+                    "targets": "1",
+                    "targeting": "id",
+                    "filters": [],
+                    "effect" : "summon",
+                    "values": ["00008"],
+                    "gfx" : ""
+                }
+            ]
+        },
+        {
+            "name": "Murloc Scout",
+            "id": "00008",
+            "mana": 1,
+            "attack" : 1,
+            "health": 1,
+            "cardType": "minion",
+            "tags": ["token"],
+            "types" : ["murloc"],
+            "set": "basic",
+            "rarity" : "none",
+            "imageUrl": "",
+            "cardText" : "",
+            "keywords" : [],
+            "triggers" : [
+            ]
+        },
+        {
+            "name": "Novice Engineer",
+            "id": "00009",
+            "mana": 2,
+            "attack" : 1,
+            "health": 1,
+            "cardType": "minion",
+            "tags": ["collectible"],
+            "types" : [],
+            "set": "basic",
+            "rarity" : "none",
+            "imageUrl": "",
+            "cardText" : "[b]Battlecry[/b]: Draw a card",
+            "keywords" : [],
+            "triggers" : [
+                {
+                    "trigger" : "onBattlecry",
+                    "targets": "",
+                    "targeting": "none",
+                    "filters": [],
+                    "effect" : "draw",
+                    "values": ["1"],
+                    "gfx" : ""
+                }
+            ]
+        },
+        {
+            "name": "Darkscale Healer",
+            "id": "0000a",
+            "mana": 5,
+            "attack" : 4,
+            "health": 5,
+            "cardType": "minion",
+            "tags": ["collectible"],
+            "types" : [],
+            "set": "basic",
+            "rarity" : "none",
+            "imageUrl": "",
+            "cardText" : "[b]Battlecry[/b]: Restore 2 Health to all friendly characters",
+            "keywords" : [],
+            "triggers" : [
+                {
+                    "trigger" : "onBattlecry",
+                    "targets": "all",
+                    "targeting": "none",
+                    "filters": ["friendly"],
+                    "effect" : "heal",
+                    "values": ["2"],
+                    "gfx" : ""
+                }
+            ]
+        },
+        {
+            "name": "Frostwolf Warlord",
+            "id": "0000b",
+            "mana": 5,
+            "attack" : 4,
+            "health": 4,
+            "cardType": "minion",
+            "tags": ["collectible"],
+            "types" : [],
+            "set": "basic",
+            "rarity" : "none",
+            "imageUrl": "",
+            "cardText" : "[b]Battlecry[/b]: Gain +1/+1 for each other friendly minion on the battlefield",
+            "keywords" : [],
+            "triggers" : [
+                {
+                    "trigger" : "onBattlecry",
+                    "targets": "all",
+                    "targeting": "none",
+                    "filters": ["friendly", "minion", "other"],
+                    "effect" : "count",
+                    "values": [],
+                    "gfx" : ""
+                },
+                {
+                    "trigger" : "onBattlecry",
+                    "targets": "1",
+                    "targeting": "none",
+                    "filters": ["self"],
+                    "effect" : "buff",
+                    "values": ["{0}", "{0}"],
+                    "gfx" : ""
+                }
+            ]
+        },
+        {
+            "name": "Gurubashi Berserker",
+            "id": "0000c",
+            "mana": 5,
+            "attack" : 2,
+            "health": 7,
+            "cardType": "minion",
+            "tags": ["collectible"],
+            "types" : [],
+            "set": "basic",
+            "rarity" : "none",
+            "imageUrl": "",
+            "cardText" : "Whenever this minion takes damage, gain +3 attack",
+            "keywords" : [],
+            "triggers" : [
+                {
+                    "trigger" : "onTakeDamage",
+                    "targets": "1",
+                    "targeting": "none",
+                    "filters": ["self"],
+                    "effect" : "buff",
+                    "values": ["3", "0"],
+                    "gfx" : ""
+                }
+               
+            ]
+        }
+
+    ]
+}
