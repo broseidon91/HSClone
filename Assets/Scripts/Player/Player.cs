@@ -16,7 +16,7 @@ public class Player : IEventSource
         local = this;
     }
 
-    public void AddToDeck(List<CardData> cards)
+    public void AddToDeck(CardData[] cards)
     {
         foreach (var card in cards)
         {

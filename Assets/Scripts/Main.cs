@@ -4,23 +4,25 @@ using UnityEngine;
 
 public class Main : MonoBehaviour
 {
-    public TextAsset textAsset;
 
     public Player player;
     public Board board;
     // Start is called before the first frame update
     void Start()
     {
-        board = new Board();
         player = new Player();
 
-
-      
+        board = new Board();
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    public void Draw()
+    {
+        board.Draw();
     }
 }

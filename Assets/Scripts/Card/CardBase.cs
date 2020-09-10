@@ -4,7 +4,7 @@ using UnityEngine;
 public class CardBase : IEventSource
 {
     private CardEventDispatcher events;
-    private CardData data;
+    public CardData data { get; private set;}
     public CardBehavior behavior;
 
     public CardBase(CardData data)
