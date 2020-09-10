@@ -3,7 +3,7 @@
 [Serializable]
 public class CardContainerObject 
 {
-    public CardContainerObject[] cards;
+    public CardData[] cards;
 }
 
 [Serializable]
@@ -23,8 +23,6 @@ public class CardData
     public string cardText;
     public string[] keywords;
     public Trigger[] triggers;
-
-
 }
 
 [Serializable]
