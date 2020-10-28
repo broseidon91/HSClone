@@ -9,10 +9,10 @@ public class CardContainerObject
 [Serializable]
 public class CardData 
 {
-    public string name;
-    public string id;
-    public int mana;
-    public int attack;
+    public string name = "None";
+    public string id = "000000";
+    public int mana = 0;
+    public int attack = 0;
     public int health ;
     public string cardType;
     public string[] tags;

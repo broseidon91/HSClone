@@ -37,6 +37,8 @@ public class CardBehavior : MonoBehaviour
         isMouseDown = false;
     }
 
+   
+
     public void Update()
     {
 

@@ -4,13 +4,16 @@ using UnityEngine;
 public class CardBase : IEventSource
 {
     private CardEventDispatcher events;
-    public CardData data { get; private set;}
+    public CardData data { get; protected set;}
     public CardBehavior behavior;
+
+    public Guid guid;
 
     public CardBase(CardData data)
     {
         this.data = data;
         events = new CardEventDispatcher();
+        guid = Guid.NewGuid();
 
         CreatePrefab();
     }
