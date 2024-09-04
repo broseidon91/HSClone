@@ -59,7 +59,7 @@
             "keywords" : [],
             "triggers" : [
                 {
-                    "trigger" : "always",
+                    "trigger" : "aura",
                     "targets": "all",
                     "targeting": "none",
                     "filters": ["friendly", "murloc", "other"],
