@@ -13,7 +13,7 @@ public class CardData
     public string id = "000000";
     public int mana = 0;
     public int attack = 0;
-    public int health ;
+    public int health = 0;
     public string cardType;
     public string[] tags;
     public string[] types;

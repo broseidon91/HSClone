@@ -13,6 +13,7 @@ public class CardBehavior : MonoBehaviour
     private bool isMouseDown = false;
     public CardData data;
     public CardBase cardBase;
+    
     public void Init(CardData data, CardBase cardBase)
     {
         this.gameObject.name = data.name;
