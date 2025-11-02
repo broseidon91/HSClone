@@ -1,3 +1,4 @@
+using Newtonsoft.Json;
 using UnityEngine;
 
 public class Board : IEventSource
@@ -10,7 +11,7 @@ public class Board : IEventSource
     {
         eventDispatcher = new BoardEventDispatcher();
 
-        CardContainerObject cards = JsonUtility.FromJson<CardContainerObject>(Resources.Load<TextAsset>("cards").text);
+        CardContainerObject cards = JsonConvert.DeserializeObject<CardContainerObject>(Resources.Load<TextAsset>("cards").text);
 
         foreach (var card in cards.cards)
         {

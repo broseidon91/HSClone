@@ -5,27 +5,34 @@ using UnityEngine;
 
 public class CardBehavior : MonoBehaviour
 {
-    public TextMeshPro mana;
-    public TextMeshPro attack;
-    public TextMeshPro health;
-    public TextMeshPro cardName;
+    public TMP_Text mana;
+    public TMP_Text attack;
+    public TMP_Text health;
+    public TMP_Text cardName;
 
     private bool isMouseDown = false;
     public CardData data;
     public CardBase cardBase;
-    
+
     public void Init(CardData data, CardBase cardBase)
     {
-        this.gameObject.name = data.name;
+        this.gameObject.name = data.Name;
         this.cardBase = cardBase;
         this.data = data;
 
-        mana.text = data.mana.ToString();
-        attack.text = data.attack.ToString();
-        health.text = data.health.ToString();
+        data.OnPropertyChanged += Render;
 
-        cardName.text = data.name;
+    }
 
+    public void Render(string field)
+    {
+        this.gameObject.name = data.Name;
+
+        mana.text = data.Mana.ToString();
+        attack.text = data.Attack.ToString();
+        health.text = data.Health.ToString();
+
+        cardName.text = data.Name;
     }
 
     public void OnMouseDown()
@@ -38,7 +45,7 @@ public class CardBehavior : MonoBehaviour
         isMouseDown = false;
     }
 
-   
+
 
     public void Update()
     {

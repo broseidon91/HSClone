@@ -7,31 +7,19 @@ public class EnumField<T> : CardEditorBase where T : struct, Enum
     public TMP_Dropdown Dropdown;
 
 
-    private T _value;
-     
-    public T Value
+    public override void Setup(CardData cardData)
     {
-        get => _value;
-        set => _value = value;
-    }
+        base.Setup(cardData);
 
-    public override object GetValue() => _value;
-
-    public override void SetValue(object value)
-    {
-        if (value is T enumValue)
-            _value = enumValue;
-    }
-
-    public void Awake()
-    {
+        Dropdown.value = (int)GetValue();
         Dropdown.onValueChanged.AddListener(OnValueChanged);
     }
 
     public virtual void OnValueChanged(int val)
     {
-        SetValue(val);
+        SetValue((T)(object)val);
     }
+
 
     public void OnValidate()
     {
@@ -41,14 +29,14 @@ public class EnumField<T> : CardEditorBase where T : struct, Enum
         {
             Dropdown = GetComponentInChildren<TMP_Dropdown>();
         }
-        
+
         if (Dropdown != null)
         {
             Dropdown.ClearOptions();
-            
+
             // Get all enum values as strings
             var options = Enum.GetNames(typeof(T)).ToList();
-            
+
             Dropdown.AddOptions(options);
         }
     }

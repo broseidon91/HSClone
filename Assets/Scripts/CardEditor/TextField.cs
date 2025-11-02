@@ -6,18 +6,11 @@ public class TextField : CardEditorBase
 
     private string _value = string.Empty;
 
-    public void Awake()
+    public override void Setup(CardData cardData)
     {
-
+        base.Setup(cardData);
+        Input.text = GetValue().ToString();
+        Input.onValueChanged.AddListener(SetValue);
     }
 
-  public override object GetValue() => _value;
-    
-    public override void SetValue(object value)
-    {
-        if (value is string str)
-            _value = str;
-    }
-    
-    
 }
